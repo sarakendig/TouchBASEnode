@@ -12,7 +12,7 @@ const typingDisplay = document.getElementById('typing');
 const peer = new Peer(undefined, {
     path: "/peerjs",
     host: "/",
-    port: "5000",
+    port: "443",
   }); 
   
   const videoGrid = document.getElementById('video-grid');
