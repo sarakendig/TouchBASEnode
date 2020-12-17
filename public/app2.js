@@ -44,8 +44,8 @@ const typingDisplay = document.getElementById('typing');
 
   
 
-  socket.on('joined', username => {
-    connect(username, stream)
+  socket.on('joined', id => {
+    connect(id, username, stream)
   })
 
   
@@ -112,8 +112,8 @@ function addUserVideo(video, stream) {
 
 
 
-  function connect(username, stream) {
-    const call = peer.call(username, stream)
+  function connect(id, stream) {
+    const call = peer.call(id, stream)
     const video = document.createElement('video')
     call.on('stream', userVideo => {
       addUserVideo(video, userVideo)
@@ -124,7 +124,7 @@ function addUserVideo(video, stream) {
      call.on('close', () => {
        video.remove()
      })
-     peers[username] = call
+     peers[id] = call
   };
 
   function muteAudio () {
