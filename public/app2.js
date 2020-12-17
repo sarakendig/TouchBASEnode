@@ -44,7 +44,7 @@ const typingDisplay = document.getElementById('typing');
 
   
 
-  socket.on('joined', id => {
+  socket.on('join', id => {
     connect(id, username, stream)
   })
 
