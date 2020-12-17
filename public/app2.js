@@ -1,5 +1,11 @@
 const socket = io();
 
+const peer = new Peer(undefined, {
+    path: "/peer",
+    host: "/",
+    port: "443",
+  }); 
+
 const messageInput = document.getElementById('message-input');
 
 const messageBox = document.getElementById('message-box');
@@ -9,11 +15,7 @@ const username = document.getElementById('username');
 
 const typingDisplay = document.getElementById('typing');
 
-const peer = new Peer(undefined, {
-    path: "/peerjs",
-    host: "/",
-    port: "443",
-  }); 
+
   
   const videoGrid = document.getElementById('video-grid');
   
