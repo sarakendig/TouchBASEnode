@@ -91,7 +91,7 @@ socket.on('chat', (data)=>{
 
 peer.on('open', id => {
     console.log('My peer ID is: ' + id);
-    socket.emit('join', roomId, id);
+    socket.emit('join',  id);
     console.log('peer connected')
     
   })
