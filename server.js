@@ -46,9 +46,11 @@ io.on('connection', function(socket) {
     // const id = socket.id;
     // console.log('client connected ' + username)
     console.log('roomId: ' + roomId)
-    socket.join(roomId)
-    io.to(roomId).emit('New user joined');
+    socket.join(roomId);
 
+    socket.on('join', (roomId, username) => {
+    io.to(roomId).emit('New user joined', username);
+})
     
     socket.on('chat', (data) => {
         console.log('message sent: ' + data.msg + ' from: ' + data.username)
@@ -60,50 +62,11 @@ io.on('connection', function(socket) {
         socket.to(roomId).broadcast.emit('typing', data ) 
         
     })
+
+
         
 })
 
-
-
-
-
-
-// io.on('connection', socket => {
-//     console.log('room id:' + roomId)
-//     // console.log(socket)
-//     const { id } = socket.client;
-//     console.log(`User connected: ${id}`);
-
-//     //   socket.join(roomId);
-
-//       socket.on('join', (roomId, id) => {
-//         socket.join(roomId)
-      
-//         socket.to(roomId).broadcast.emit('joined', id);
-      
-      
-
-//         socket.on('chat', msg => {
-//             console.log('message sent: ' + msg)
-//             io.to(roomId).emit('chat', id + ':' + msg );
-//         })
-    
-//         socket.on('typing', (data) => {
-//             console.log('typing...')
-//             if(data.typing==true) {
-//                 io.emit('typing', id + data ) 
-//             }
-           
-    
-//         })
-
-//     })
-
-//     socket.on('logout', () => {
-//         console.log('User logged out')
-//         socket.emit('user ${id} logged off')
-//     })
-// })
 
 
 
