@@ -8,7 +8,7 @@
 
 ## What is it?
 
-WeLink is a video chat application with a realtime peer 2 peer video. Users are able to use video to call each other as well as chat in real time in a private room. 
+TouchBASE is a video chat application with a realtime peer 2 peer video. Users are able to use video to call each other as well as chat in real time in a private room. 
 
 This application uses socket.io and peerjs to implement the real-time messaging between users.
 
