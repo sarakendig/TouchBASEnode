@@ -85,3 +85,53 @@ getVideo({
         alert('Please allow camera, stream not connecting');
     }
 })
+
+
+
+// peer connection stops sockets from working
+
+
+// const inputConnect = document.getElementById('connect');
+// const peerid = document.getElementById('peer-id');
+
+// const connect = document.getElementById('connection-button');
+
+
+// const peer = new Peer(id, {
+//     path: "/peerjs",
+//     host: "/",
+//     port: "443",
+//   });
+
+
+// peer.on('open', function(id) {
+//     console.log("My Peer id is: " + id)
+//     peerid.innerHTML = id;
+// });
+
+
+// peer.on('connection', function(connection){
+// conn = connection;
+// peerId = connection.peer;
+
+// inputConnect.value = peerId;
+// })
+
+// connect.addEventListener('click', function(){
+//     var conn = peer.connect(peerId);
+//     var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+// peer.on('call', function(call) {
+//   getUserMedia({video: true, audio: true}, function(window.localStream) {
+//     call.answer(stream); // Answer the call with an A/V stream.
+//     call.on('stream', function(stream) {
+//       window.remoteStream = stream;
+//       displayStream(stream, 'remote')
+//     });
+//   }, function(err) {
+//     console.log('Failed to get local stream' ,err);
+//   });
+// });
+
+// })
+
+
