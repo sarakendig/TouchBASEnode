@@ -49,7 +49,7 @@ io.on('connection', function(socket) {
     socket.join(roomId);
 
     socket.on('join', (roomId, username) => {
-    io.to(roomId).emit('New user joined', username);
+    io.to(roomId).emit('joined', username);
 })
     
     socket.on('chat', (data) => {

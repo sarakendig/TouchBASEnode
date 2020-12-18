@@ -24,7 +24,7 @@
     <script src="/socket.io/socket.io.js" defer></script>
 
     <link rel="stylesheet" href="/main.css">
-    <script src="app2.js" defer></script>
+    <script src="app.js" defer></script>
     
 </head>
 
@@ -37,14 +37,10 @@
                 <div id="video-grid">
 
                     <div class="row">
-                        <div class="col s6">
-                            <video id="local" autoplay="autoplay" muted>
-                            </video>
+                        <div class="col s6"><video id="local" autoplay="autoplay" muted></video>
                         </div>
-
-                        <div class="col s6">
-                            <video id="user" autoplay="autoplay">
-                            </video>
+                       
+                        <div class="col s6"><video id="remote" autoplay="autoplay" muted></video>
                         </div>
                     </div>
                     

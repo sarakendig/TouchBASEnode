@@ -17,13 +17,13 @@ const typingDisplay = document.getElementById('typing');
 
 
   
-  const videoGrid = document.getElementById('video-grid');
+const videoGrid = document.getElementById('video-grid');
   
   
   const peers = {};
   let localVideoStream;
   
-  const video = document.createElement('video');
+  const video = document.createElement('video')
   
   video.muted = true;
   navigator.mediaDevices.getUserMedia({
@@ -44,7 +44,7 @@ const typingDisplay = document.getElementById('typing');
 
   
 
-  socket.on('join', id => {
+  socket.on('joined', id => {
     connect(id, username, stream)
   })
 
