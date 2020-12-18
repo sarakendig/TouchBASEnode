@@ -86,7 +86,25 @@ getVideo({
     }
 })
 
+function muteAudio () {
+    let notMuted =  window.localStream.getAudioTracks()[0].enabled;
 
+    if (notMuted) {
+       window.localStream.getAudioTracks()[0].enabled = false;
+    } else {
+       window.localStream.getAudioTracks()[0].enabled = true;
+    }
+  };
+
+  function stopVideo () {
+    let notStopped =  window.localStream.getVideoTracks()[0].enabled;
+
+    if (notStopped) {
+       window.localStream.getVideoTracks()[0].enabled = false;
+    } else {
+       window.localStream.getVideoTracks()[0].enabled = true;
+    }
+  }
 
 // peer connection stops sockets from working
 
